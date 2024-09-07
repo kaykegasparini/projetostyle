@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllSuppliers } from "../../services/authService";
 import { delSup } from '../../services/delService';
-import { Link } from "react-router-dom";
 import Header from '../Header/header';
 import Sidebar from '../Header/sidebar';
 import { AcaoButton, Container, Table, Td, Th, Title } from "../styles/styles";
@@ -73,7 +72,7 @@ function TabelaFornecedor() {
                                 <Td>{fornecedor.fornecedorEstado}</Td>
                                 <Td>{fornecedor.fornecedorTelefone}</Td>
                                 <Td>{fornecedor.fornecedorEmail}</Td>
-                                <Td>{fornecedor.nomeCategoria}</Td>
+                                <Td>{fornecedor.categoriaNome}</Td>
                                 <Td>
                                     <AcaoButton onClick={() => deletarFornecedor(fornecedor.fornecedorID)}>
                                         Excluir

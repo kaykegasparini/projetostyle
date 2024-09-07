@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { getCategorias, registerSupplier } from '../../services/authService';
 import Header from '../Header/header';
 import Sidebar from '../Header/sidebar';
@@ -107,7 +106,7 @@ function CadastroFornecedor() {
                         <StyledOption value="">Selecione uma categoria</StyledOption>
                         {categorias.map((categoria) => (
                             <StyledOption key={categoria.idCategoria} value={categoria.idCategoria}>
-                                {categoria.nomeCategoria}
+                                {categoria.categoriaNome}
                             </StyledOption>
                         ))}
                     </StyledSelect>

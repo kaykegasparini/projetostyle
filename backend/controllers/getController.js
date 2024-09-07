@@ -39,7 +39,7 @@ async function getSuppliers(req, res) {
 
     try {
         const [rows] = await connection.execute(
-            `SELECT fornecedor.*, categoria.nomeCategoria 
+            `SELECT fornecedor.*, categoria.categoriaNome 
              FROM fornecedor 
              JOIN categoria ON fornecedor.idCategoria = categoria.idCategoria`
         );

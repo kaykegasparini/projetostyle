@@ -4,7 +4,7 @@ async function getCategorias(req, res) {
     const connection = await connectToDatabase();
 
     try {
-        const [rows] = await connection.execute('SELECT idCategoria, nomeCategoria FROM categoria');
+        const [rows] = await connection.execute('SELECT idCategoria, categoriaNome FROM categoria');
         res.status(200).json(rows);
     } catch (error) {
         console.error(error);
